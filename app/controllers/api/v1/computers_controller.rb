@@ -1,5 +1,5 @@
 class Api::V1::ComputersController < ApplicationController
-  before_action :set_computer, only: [:show, :update, :destroy]
+  before_action :set_computer, only: %i[show update destroy]
 
   # GET /computers
   def index
@@ -39,13 +39,14 @@ class Api::V1::ComputersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_computer
-      @computer = Computer.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def computer_params
-      params.require(:computer).permit(:hdd, :processor, :ram, :brand, :price, :accessories)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_computer
+    @computer = Computer.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def computer_params
+    params.require(:computer).permit(:hdd, :processor, :ram, :brand, :price, :accessories)
+  end
 end
