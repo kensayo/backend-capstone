@@ -14,9 +14,9 @@ class ComputersRepresenter
         price: computer.price,
         accessories: computer.accessories,
         users: computer.users.map do |user| {
-          user_id: user.id,
+          id: user.id,
           username: user.username,
-          user_email: user.email
+          email: user.email
         }
       end
       }

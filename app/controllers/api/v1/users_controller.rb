@@ -5,12 +5,12 @@ class Api::V1::UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users
+    render json: UsersRepresenter.new(@users).as_json
   end
 
   # GET /users/1
   def show
-    render json: @user
+    render json: UserRepresenter.new(@user).as_json
   end
 
   # POST /users
