@@ -4,7 +4,7 @@ class ComputersRepresenter
   end
 
   def as_json
-      computers.map do |computer|
+    computers.map do |computer|
       {
         id: computer.id,
         hdd: computer.hdd,
@@ -13,17 +13,18 @@ class ComputersRepresenter
         brand: computer.brand,
         price: computer.price,
         accessories: computer.accessories,
-        users: computer.users.map do |user| {
-          id: user.id,
-          username: user.username,
-          email: user.email
-        }
-      end
+        users: computer.users.map do |user|
+                 {
+                   id: user.id,
+                   username: user.username,
+                   email: user.email
+                 }
+               end
       }
     end
   end
 
-  private 
+  private
 
   attr_reader :computers
 end

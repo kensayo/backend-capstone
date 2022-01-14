@@ -5,25 +5,25 @@ class UserRepresenter
 
   def as_json
     {
-  
-        id: @user.id,
-        username: @user.username,
-        email: @user.email,
-        computers: @user.computers.map do |computer| {
-          id: computer.id,
-          hdd: computer.hdd,
-          processor: computer.processor,
-          ram: computer.ram,
-          brand: computer.brand,
-          price: computer.price,
-          accessories: computer.accessories
-        }
-      end
+
+      id: @user.id,
+      username: @user.username,
+      email: @user.email,
+      computers: @user.computers.map do |computer|
+                   {
+                     id: computer.id,
+                     hdd: computer.hdd,
+                     processor: computer.processor,
+                     ram: computer.ram,
+                     brand: computer.brand,
+                     price: computer.price,
+                     accessories: computer.accessories
+                   }
+                 end
     }
-    end
-  
+  end
 
-private 
+  private
 
-attr_reader :users
+  attr_reader :users
 end
