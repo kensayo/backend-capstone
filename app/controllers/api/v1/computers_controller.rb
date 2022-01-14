@@ -5,12 +5,12 @@ class Api::V1::ComputersController < ApplicationController
   def index
     @computers = Computer.all
 
-    render json: @computers
+    render json: ComputersRepresenter.new(@computers).as_json
   end
 
   # GET /computers/1
   def show
-    render json: @computer
+    render json: ComputerRepresenter.new(@computer).as_json
   end
 
   # POST /computers
