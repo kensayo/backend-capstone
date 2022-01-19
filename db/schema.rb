@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2022_01_18_225732) do
     t.string "accessories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "images"
     t.string "image"
   end
 

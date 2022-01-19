@@ -12,6 +12,7 @@ class ComputerRepresenter
       brand: @computer.brand,
       price: @computer.price,
       accessories: @computer.accessories,
+      image: @computer.image,
       users: @computer.users.map do |user|
                {
                  user_id: user.id,

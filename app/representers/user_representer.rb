@@ -17,7 +17,8 @@ class UserRepresenter
                      ram: computer.ram,
                      brand: computer.brand,
                      price: computer.price,
-                     accessories: computer.accessories
+                     accessories: computer.accessories,
+                     image: computer.image
                    }
                  end
     }
