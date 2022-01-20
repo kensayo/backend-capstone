@@ -81,7 +81,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
-    msgpack (1.4.2)
+    msgpack (1.4.3)
     nio4r (2.5.8)
     nokogiri (1.13.1-x64-mingw32)
       racc (~> 1.4)
