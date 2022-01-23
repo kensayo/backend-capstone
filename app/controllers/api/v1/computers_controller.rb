@@ -47,6 +47,6 @@ class Api::V1::ComputersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def computer_params
-    params.require(:computer).permit(:hdd, :processor, :ram, :brand, :price, :accessories)
+    params.require(:computer).permit(:hdd, :processor, :ram, :brand, :price, :accessories, :image)
   end
 end
