@@ -23,7 +23,7 @@ def login
       return user.id
 
   else
-      render json: {failure: "Log in failed! Username or password invalid!"}
+      render json: {failure: "Log in failed! Username invalid!"}
   end
 end
 
