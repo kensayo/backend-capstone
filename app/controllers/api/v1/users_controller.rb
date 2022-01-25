@@ -21,7 +21,7 @@ class Api::V1::UsersController < ApplicationController
       token = encode_token(payload)
       render json: {status: :created, user: @user, jwt: token}
     else  
-      render json: {errors: user.errors.full_messages}, status: :not_acceptable
+      render json: {errors: @user.errors.full_messages}, status: :not_acceptable
     end
 
   end
@@ -49,6 +49,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_digest)
+    params.require(:user).permit(:username, :email, :password_digest)
   end
 end
