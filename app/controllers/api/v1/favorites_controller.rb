@@ -18,10 +18,10 @@ class Api::V1::FavoritesController < ApplicationController
     @favorite = Favorite.create!(favorite_params)
 
     if @favorite.save
-      render json: @favorite, status: :created, location: @favorite 
+      render json: @favorite, status: :created, location: @favorite
     else
       render json: @favorite.errors, status: :unprocessable_entity
-  
+
     end
   end
 
@@ -48,6 +48,6 @@ class Api::V1::FavoritesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def favorite_params
-    params.require(:favorite).permit( :user_id, :computer_id)
+    params.require(:favorite).permit(:user_id, :computer_id)
   end
 end
