@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
-  # before_action :require_login
-  # skip_before_action :require_login, only: [:home]
-
+   # before_action :require_login
+   # skip_before_action :require_login, only: [:home]
+   # rubocop:disable all
   def encode_token(payload)
     JWT.encode(payload, 'my_secret')
   end

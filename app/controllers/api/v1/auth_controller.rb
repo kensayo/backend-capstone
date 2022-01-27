@@ -18,6 +18,7 @@ class Api::V1::AuthController < ApplicationController
     if user
       # payload = {user_id: user.id}
       # token = encode_token(payload)
+      # rubocop:disable all
       render json: { user: user, success: "Welcome back, #{user.username}" }
       return user.id
 
