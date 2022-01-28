@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :favorites
-  has_many :computers, through: :favorites
+  has_many :computers, through: :favorites, dependent: :destroy
 
   validates :username, presence: true
   validates :username, uniqueness: true
