@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     namespace :api do
       namespace :v1 do
         resources :favorites, only: [:create, :destroy, :update]
-        resources :computers, only: [:create, index, :show]
+        resources :computers, only: [:create, :index, :show]
         resources :users, only:[:create]
         post "/login", to: "auth#login"
       end
