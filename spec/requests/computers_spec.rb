@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'API call ', type: :request do
   describe 'Computers' do
-
     it 'GET /api/v1/computers' do
       FactoryBot.create(:computer, hdd: 256, processor: 1, ram: 64, brand: 'Lorem', price: 65,
                                    accessories: 'Lorem Ipsum', image: 'www.image.com/image.png')
