@@ -18,7 +18,7 @@ class Api::V1::ComputersController < ApplicationController
     @computer = Computer.new(computer_params)
 
     if @computer.save
-      render json: @computer, status: :created, location: @computer
+      render json: @computer, status: :created
     else
       render json: @computer.errors, status: :unprocessable_entity
     end
