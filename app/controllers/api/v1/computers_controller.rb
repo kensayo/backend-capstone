@@ -24,15 +24,6 @@ class Api::V1::ComputersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /computers/1
-  def update
-    if @computer.update(computer_params)
-      render json: @computer
-    else
-      render json: @computer.errors, status: :unprocessable_entity
-    end
-  end
-
   # DELETE /computers/1
   def destroy
     @computer.destroy
