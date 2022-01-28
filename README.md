@@ -57,7 +57,7 @@ To get a local copy up and running follow these simple example steps. **In order
 
 - Open your terminal and move to the root of the project, using ```$ cd``` command.
 - Run ```$ bundle install``` to install all dependencies.
-- You must run ```$ rails db:create``` to create the database and ```$ rails db:migrate``` to migrate the tables 
+- You must run ```$ rails db:create``` to create the database and ```$ rails db:migrate``` to migrate the tables and ```$ rails db:seed```
 - After this now you can run the server with ```$ rails s```
 
 ### 🔌 Usage
